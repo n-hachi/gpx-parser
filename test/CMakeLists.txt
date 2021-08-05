@@ -11,7 +11,14 @@ enable_testing()
 # 渡されたテスト名を実行用ファイルとしてctestの対象に加えていく関数
 function (add_gtest_target test_name)
     add_executable(${test_name}_test ${CMAKE_SOURCE_DIR}/src/${test_name}.cc)
-    target_link_libraries(${test_name} gtest_main)
+    target_include_directories(
+        ${test_name}
+        PUBLIC ${CMAKE_SOURCE_DIR}/include
+        )
+    target_link_libraries(
+        ${test_name}
+        gtest_main
+        )
     add_test(
         NAME ${test_name}
         COMMAND ./${test_name}
