@@ -1,10 +1,3 @@
-#define CATCH_CONFIG_MAIN
-#include <catch2/catch.hpp>
-#include "mylib/mylib.hpp"
+#include "gtest/gtest.h"
 
-TEST_CASE("Sample check", "[main]") {
-  REQUIRE(mylib::Fibonacci(1) == 1);
-  REQUIRE(mylib::Fibonacci(2) == 1);
-  REQUIRE(mylib::Fibonacci(3) == 2);
-  REQUIRE(mylib::Fibonacci(4) == 3);
-}
+TEST(sample_test_case, sample_test) { EXPECT_EQ(1, 1); }
