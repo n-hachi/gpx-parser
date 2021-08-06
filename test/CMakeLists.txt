@@ -10,13 +10,15 @@ enable_testing()
 
 # 渡されたテスト名を実行用ファイルとしてctestの対象に加えていく関数
 function (add_gtest_target test_name)
-    add_executable(${test_name}_test ${CMAKE_SOURCE_DIR}/src/${test_name}.cc)
+    add_executable(${test_name} ${test_name}.cc)
     target_include_directories(
         ${test_name}
         PUBLIC ${CMAKE_SOURCE_DIR}/include
         )
     target_link_libraries(
         ${test_name}
+        gpx-parser
+        gtest
         gtest_main
         )
     add_test(
@@ -26,7 +28,7 @@ function (add_gtest_target test_name)
 endfunction()
 
 set(gtest_targets # テストファイルはこの配列に追加していく
-    gpx-parser
+    gpx-parser_test
     )
 
 # 上で定義されたテストファイル群をadd_gtest_target関数に渡すだけのループ
