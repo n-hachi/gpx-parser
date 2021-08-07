@@ -8,10 +8,6 @@
 
 namespace gpx {
 
-Gpx::Gpx(std::istream *is) {
-    std::istreambuf_iterator<char> it{*is};
-    std::vector<char> buf(it, std::istreambuf_iterator<char>());
-    buf.push_back('\0');
-}
+Gpx::Gpx(rapidxml::xml_node<> *node) {}
 
 }  // namespace gpx
