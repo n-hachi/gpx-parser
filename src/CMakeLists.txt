@@ -8,12 +8,14 @@ FetchContent_MakeAvailable(rapidxml)
 set(
     HEADER_LIST
     "${CMAKE_SOURCE_DIR}/include/gpx/gpx-parser.h"
+    "${CMAKE_SOURCE_DIR}/include/gpx/gpx.h"
     )
 
 add_library(
     gpx-parser
     STATIC
     gpx-parser.cc
+    gpx.cc
     ${HEADER_LIST}
     )
 
