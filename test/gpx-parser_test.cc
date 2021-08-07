@@ -14,7 +14,7 @@ TEST(GpxTest, GpxMinimumTest) {
  creator="n-hachi">
 </gpx>
 )##");
-    gpx::Gpx gpx(ss);
+    gpx::Gpx gpx(&ss);
     EXPECT_EQ(gpx.version(), "1.1");
     EXPECT_EQ(gpx.creator(), "n-hachi");
 }
