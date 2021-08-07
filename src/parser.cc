@@ -1,4 +1,4 @@
-#include "gpx/gpx-parser.h"
+#include "gpx/parser.h"
 
 #include <vector>
 
