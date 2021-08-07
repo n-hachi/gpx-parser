@@ -28,6 +28,7 @@ function (add_gtest_target test_name)
 endfunction()
 
 set(gtest_targets # テストファイルはこの配列に追加していく
+    parser_test
     gpx_test
     )
 

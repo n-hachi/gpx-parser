@@ -1,5 +1,7 @@
 #include "gpx/parser.h"
 
-#include <vector>
+#include <memory>
 
-namespace gpx {}  // namespace gpx
+namespace gpx {
+std::unique_ptr<Gpx> Parse(std::istream *is) {}
+}  // namespace gpx
