@@ -19,9 +19,20 @@ endif()
 
 # Only do following if this is the main project
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    # Ensure -std=c++xx instead of -std=g++xx
+    set(CMAKE_CXX_EXTENSIONS OFF)
+
+    # Testing only available if this is the main app
+    include(CTest)
+
     # The Executable code
     add_subdirectory(app)
 endif()
 
 # Library code
 add_subdirectory(src)
+
+# Testing only available if this is the main app
+if(CMKE_PROJECT_NAME STREQUAL PROJECT_NAME OR BUILD_TESTING)
+    add_subdirectory(test)
+endif()
