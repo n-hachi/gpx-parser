@@ -28,7 +28,8 @@ function (add_gtest_target test_name)
 endfunction()
 
 set(gtest_targets # テストファイルはこの配列に追加していく
-    gpx-parser_test
+    parser_test
+    gpx_test
     )
 
 # 上で定義されたテストファイル群をadd_gtest_target関数に渡すだけのループ
