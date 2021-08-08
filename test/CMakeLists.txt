@@ -30,6 +30,7 @@ endfunction()
 set(gtest_targets # テストファイルはこの配列に追加していく
     parser_test
     gpx_test
+    trk_test
     )
 
 # 上で定義されたテストファイル群をadd_gtest_target関数に渡すだけのループ

@@ -2,6 +2,8 @@
 
 #include <vector>
 
+#include "rapidxml.hpp"
+
 namespace gpx {
 
 /**
@@ -10,6 +12,8 @@ namespace gpx {
  */
 class Trk {
    public:
+    Trk(rapidxml::xml_node<> *node);
+
    private:
 };
 }  // namespace gpx
