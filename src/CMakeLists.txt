@@ -9,6 +9,7 @@ set(
     HEADER_LIST
     "${CMAKE_SOURCE_DIR}/include/gpx/parser.h"
     "${CMAKE_SOURCE_DIR}/include/gpx/gpx.h"
+    "${CMAKE_SOURCE_DIR}/include/gpx/trk.h"
     )
 
 add_library(
@@ -16,6 +17,7 @@ add_library(
     STATIC
     parser.cc
     gpx.cc
+    trk.cc
     ${HEADER_LIST}
     )
 
