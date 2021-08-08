@@ -50,3 +50,11 @@ TEST(TrkTest, TrkUnproperArgumentTest) {
     // Create trk
     EXPECT_THROW((gpx::Trk(node)), std::invalid_argument);
 }
+
+/*
+ * Tests for Trk class constructor with nullptr.
+ */
+TEST(TrkTest, TrkNullptrTest) {
+    // Create trk
+    EXPECT_THROW((gpx::Trk(nullptr)), std::invalid_argument);
+}
